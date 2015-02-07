@@ -7,5 +7,8 @@ myDat <- rbind(myDat, read.csv(fileCon, col.names = names(myDat), skip = 66634, 
 close.connection(fileCon)
 
 png("Plot_1.png")
-hist(myDat[["Global_active_power"]], main = "Global Active Power", xlab = "Global Active Power (kilowatts)", col = "red")
+plot1 <- function(){
+    hist(myDat$Global_active_power, main = "Global Active Power", xlab = "Global Active Power (kilowatts)", col = "red")
+}
+plot1()
 dev.off()

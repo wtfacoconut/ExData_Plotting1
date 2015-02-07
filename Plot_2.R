@@ -14,5 +14,8 @@ dow <- function(x) dmy_hms(x)
 myDat$Date <- dow(myDat$Date)
 
 png("Plot_2.png")
-plot(myDat$Date, myDat[["Global_active_power"]], type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
+plot2 <- function(){
+    plot(myDat$Date, myDat$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
+}
+plot2()
 dev.off()
